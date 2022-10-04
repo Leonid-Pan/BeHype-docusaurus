@@ -1,43 +1,67 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Create a Page
+# Профиль
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+В данном модуле описывается профиль пользователя
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
+Здесь фиксируется вся информация о пользователе а именно:
+- `Фотография пользователя`
+- `Подключенные соц. сети`
+- `Описание`
+- `Категории`
+- `Статистика`
 
-## Create your first React Page
+![Docusaurus Plushie](./name.png)
 
-Create a file at `src/pages/my-react-page.js`:
+- `Цены сделки с данным пользователем`
 
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
+![Docusaurus Plushie](./price.png)
+![Docusaurus Plushie](./price_inst.png)
 
-export default function MyReactPage() {
-  return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
-}
-```
+- `Баланс`
 
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
+![Docusaurus Plushie](./balance.png)
 
-## Create your first Markdown Page
+## Input/Output data
 
-Create a file at `src/pages/my-markdown-page.md`:
+Модель -  `user/me`:
 
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
+| Наименование                                 | Параметр       | Тип     |
+| -------------------------------------------- | ------------   | ----    |
+| Id                                           | UUID           | string  |
+| Телефон                                      | phone          | string  |
+| Email                                        | email          | string  |
+| Имя пользователя                             | username       | string  |
+| Имя                                          | first_name     | string  |
+| Фамилия                                      | last_name      | string  |
+| Баланс                                       | balance        | int     |
+| Дата рождения                                | birth_date     | date    |
+| Город                                        | city           | string  |
+| Пол                                          | gender         | string  |
+| Информация о пользователе                    | information    | string  |
+| Аватар                                       | avatar         | string  |
+| Категории                                    | categories     | dict    |
+| Подтверждение email                          | email_confirmed| boolean |
+| Tiktok                                       | tiktok         | dict    |
+| Instagram                                    | instagram      | dict    |   
+| Подключение инстаграмма                      | instagram_connected| boolean    |
+| Подключение тиктока                          | tiktok_connected | boolean |
+| Взаимопиар                                   | mutual_pr_agreement| dict    |                      
 
-This is a Markdown page
-```
+## User story - Пользователь
 
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).
+Я как пользователь скачавший приложение Behype,захожу в раздел "Профиль", после регистрации я начинаю заполнять свой профиль (некоторые необязательные поля могут быть пустыми)
+
+1. Заполняю имя и фамилию
+2. Подключаю соц.сети
+3. Проставляю цены для сделок со мной
+4. Добавляю описание
+5. Добавляю категории
+
+После этого я могу совершать :
+
+1. Сделки с другими пользователям
+2. Учавствовать/Создавать челленджи
+3. Люди могут меня найти по интересам

@@ -1,31 +1,17 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
-# Deploy your site
+# Главная страница
 
-Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
+Главная страница - она же кнопка Home, данный модуль описывает всь функционал приложения ByHype
 
-It builds your site as simple **static HTML, JavaScript and CSS files**.
+В данном модуле можно увидеть :
 
-## Build your site
+1. Поиск
+2. Старт нового челленджа
+3. Топ криэйтеров
+4. Топ челленджей
+5. Похожие криэйтеры
 
-Build your site **for production**:
-
-```bash
-npm run build
-```
-
-The static files are generated in the `build` folder.
-
-## Deploy your site
-
-Test your production build locally:
-
-```bash
-npm run serve
-```
-
-The `build` folder is now served at [http://localhost:3000/](http://localhost:3000/).
-
-You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read the **[Deployment Guide](https://docusaurus.io/docs/deployment)**).
+![Docusaurus Plushie](./acc.png)
